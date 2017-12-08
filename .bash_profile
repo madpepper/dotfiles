@@ -1,6 +1,8 @@
-eval $(gdircolors ~/.bash_solarized/dircolors.ansi-light)
-
 if [ -f ~/.bashrc ] ; then
-. ~/.bashrc
+    . ~/.bashrc
+fi
+
+if [ -f ~/.bashrc_ex ] ; then
+    . ~/.bashrc_ex
 fi
 
