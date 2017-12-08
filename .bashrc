@@ -2,13 +2,12 @@
 stty stop undef
 
 # Alias
-alias ls='gls --color=auto'
-alias ll='gls --color=auto -AlFh --show-control-chars'
-alias la='gls --color=auto -CFal'
+alias ls='ls --color=auto'
+alias ll='ls --color=auto -AlFh --show-control-chars'
+alias la='ls --color=auto -CFal'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
-alias sc='screen'
 alias ps='ps --sort=start_time'
 
 # Custom prompt
