@@ -1,67 +1,68 @@
 " setting
-"文字コードをUFT-8に設定
+" Set encoding to UTF-8
 set fenc=utf-8
-" バックアップファイルを作らない
+" Don't create backup file
 set nobackup
-" スワップファイルを作らない
+" Don't create swap file
 set noswapfile
-" 編集中のファイルが変更されたら自動で読み直す
+" Automatically reload file when updated
 set autoread
-" バッファが編集中でもその他のファイルを開けるように
+" Open file when editing buffer
 set hidden
-" 入力中のコマンドをステータスに表示する
+" Show command to status in the input
 set showcmd
 
 
-" 見た目系
-" 行番号を表示
+" Apperance
+" Show number of lines
 set number
-" 現在の行を強調表示
+" Enphasize current line
 set cursorline
-" 現在の行を強調表示（縦）
-set cursorcolumn
-" 行末の1文字先までカーソルを移動できるように
+" Enable edit one more column in the end of line
 set virtualedit=onemore
-" インデントはスマートインデント
+" Smart indent
 set smartindent
-" ビープ音を可視化
+" Visualize beep
 set visualbell
-" 括弧入力時の対応する括弧を表示
+" Show match case of bracket
 set showmatch
-" ステータスラインを常に表示
+" Always show status line
 set laststatus=2
-" コマンドラインの補完
+" Enable command line assist
 set wildmode=list:longest
-" 折り返し時に表示行単位での移動できるようにする
+" Enable moving line along WYSIWYG
 nnoremap j gj
 nnoremap k gk
 
 
-" Tab系
-" 不可視文字を可視化(タブが「▸-」と表示される)
+" Tab shifting
+" Show invisible charactors
 set list listchars=tab:\▸\-
-" Tab文字を半角スペースにする
+" Use space instead of 'tab charactor'
 set expandtab
-" 行頭以外のTab文字の表示幅（スペースいくつ分）
+" Tab length in the middle of line
 set tabstop=4
-" 行頭でのTab文字の表示幅
+" Tab length in the begging of line
 set shiftwidth=4
 
 
-" 検索系
-" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
+" Finding
+" Ignore charactor case when includes lower case only
 set ignorecase
-" 検索文字列に大文字が含まれている場合は区別して検索する
+" Recognize charactor case when includes upper case
 set smartcase
-" 検索文字列入力時に順次対象文字列にヒットさせる
+" Real time search
 set incsearch
-" 検索時に最後まで行ったら最初に戻る
+" Wrap search position
 set wrapscan
-" 検索語をハイライト表示
+" Highlighting search words
 set hlsearch
-" ESC連打でハイライト解除
+" Disalbe highlighting when double esc
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-" その他
+
+" others
+" Syntax highlighting
 syntax on
+" Auto indent
 set autoindent
 
