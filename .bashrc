@@ -9,6 +9,11 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias ps='ps --sort=start_time'
+function cd-ls()
+{
+    \cd "$@" && ls
+}
+alias cd='cd-ls'
 
 # Custom prompt
 function init-prompt-git-branch()
