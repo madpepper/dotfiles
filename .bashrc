@@ -2,9 +2,9 @@
 stty stop undef
 
 # Alias
-alias ls='ls --color=auto'
-alias ll='ls --color=auto -AlFh --show-control-chars'
-alias la='ls --color=auto -CFal'
+alias ls='ls -G'
+alias ll='ls -GAlFh --show-control-chars'
+alias la='ls -GCFal'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -28,4 +28,6 @@ export PATH=$PATH:/sbin:/usr/sbin
 export PAGER='/usr/bin/lv -c' # for man command
 export EDITOR='/usr/bin/vim' # for visudo command
 export HISTSIZE=100000 # History size
+export TERM=xterm-256color
+export LSCOLORS=ExGxdxdxCxDxDxBxBxegeg
 
