@@ -3,12 +3,11 @@ stty stop undef
 
 # Alias
 alias ls='ls -G'
-alias ll='ls -GAlFh --show-control-chars'
+alias ll='ls -GAlFh'
 alias la='ls -GCFal'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
-alias ps='ps --sort=start_time'
 function cd-ls()
 {
     \cd "$@" && ls
