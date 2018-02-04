@@ -36,8 +36,6 @@ nnoremap k gk
 
 
 " Tab shifting
-" Show invisible charactors
-set list listchars=tab:\V\-
 " Use space instead of 'tab charactor'
 set expandtab
 " Tab length in the middle of line
