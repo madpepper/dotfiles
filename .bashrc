@@ -2,9 +2,9 @@
 stty stop undef
 
 # Alias
-alias ls='ls -G'
-alias ll='ls -GAlFh'
-alias la='ls -GCFal'
+alias ls='ls --color=auto'
+alias ll='ls -AlFh --color=auto'
+alias la='ls -CFal --color=auto'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
