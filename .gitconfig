@@ -1,0 +1,5 @@
+[user]
+	email = hyper.pepper+github@gmail.com
+	name = madpepper
+[push]
+	default = simple
