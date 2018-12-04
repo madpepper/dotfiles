@@ -29,4 +29,5 @@ export EDITOR='/usr/bin/vim' # for visudo command
 export HISTSIZE=100000 # History size
 export TERM=xterm-256color
 export LSCOLORS=ExGxdxdxCxDxDxBxBxegeg
+set completion-ignore-case on
 
