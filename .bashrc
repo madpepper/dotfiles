@@ -1,50 +1,88 @@
 # Avoid to lock when using ctrl+s
 stty stop undef
 
-# Alias
-alias ls='ls --color=auto'
-alias ll='ls -AlFh --color=auto'
-alias la='ls -CFal --color=auto'
-alias mv='mv -i'
-alias rm='rm -i'
-alias cp='cp -i'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias g='git'
-alias gc='git commit'
-alias ga='git add'
-alias gd='git diff'
-alias gs='git status'
-alias gcl='git clone'
-alias gf='git fetch'
-alias gp='git push'
-alias .up='git -C ~/.dotfiles fetch&&git -C ~/.dotfiles merge&&~/.dotfiles/dotfiles_cp.sh'
-alias .bash='vim ~/.dotfiles/.bashrc'
-alias .sh='vim ~/.dotfiles/dotfiles_cp.sh'
-alias .push='git -C ~/.dotfiles add --all&&git -C ~/.dotfiles commit&&git -C ~/.dotfiles push'
-alias ,="sudo"
 
+# Functions
+## cd + ls
 function cd-ls()
 {
     \cd "$@" && ls
 }
-alias cd='cd-ls'
-
-# Custom prompt
-function init-prompt-git-branch()
+## Custom prompt
+function prompt-git-branch()
 {
     git symbolic-ref HEAD 2>/dev/null >/dev/null &&
     echo "($(git symbolic-ref HEAD 2>/dev/null | sed 's/^refs\/heads\///'))"
 }
-export PS1='\[\e[0;36m\]---\[\e[0m\]\n    [ \[\e[0;35m\]\t \D{%d/%m/%Y}\[\e[0m\] \[\e[1;32m\]\u\[\e[0m\] ] \[\e[1;31m\]\w\[\e[0m\] \[\e[1;36m\]$(init-prompt-git-branch)\[\e[0m\]\n\[\e[0;31m\]\$\[\e[0m\] '
+## cat + less
+function cat-less()
+{
+    cat $@ | less
+}
+
+
+# Alias
+## cd,ls
+alias ....='cd-ls ../../..'
+alias ...='cd-ls ../..'
+alias ..='cd-ls ..'
+alias cd='cd-ls'
+alias la='ls -CFal --color=auto'
+alias ll='ls -AlFh --color=auto'
+alias ls='ls --color=auto'
+## cp, mkdir, mv, rm, rsync
+alias cp='cp -i'
+alias md='mkdir -p'
+alias mv='mv -i'
+alias rm='rm -i'
+alias rs='rsync -ahv'
+## dotfiles
+alias .bash='vim ~/.dotfiles/.bashrc'
+alias .dep='~/.dotfiles/dotfiles_cp.sh'
+alias .push='git -C ~/.dotfiles add --all&&git -C ~/.dotfiles commit&&git -C ~/.dotfiles push'
+alias .sh='vim ~/.dotfiles/dotfiles_cp.sh'
+alias .tmux='vim ~/.dotfiles/.tmux.conf'
+alias .up='git -C ~/.dotfiles fetch&&git -C ~/.dotfiles merge&&~/.dotfiles/dotfiles_cp.sh'
+alias .vim='vim ~/.dotfiles/.vimrc'
+## apt
+alias Ai='sudo apt install'
+alias As='apt search'
+alias Au='sudo apt update && sudo apt upgrade'
+## git
+alias GC='git clone'
+alias Ga='git add'
+alias Gc='git commit'
+alias Gd='git diff'
+alias Gf='git fetch'
+alias Gp='git push'
+alias Gs='git status'
+## grep, find
+alias eg='egrep --color=auto'
+alias f='find ./ -iname'
+alias fg='fgrep --color=auto'
+alias g='grep --color=auto'
+alias grep='grep --color=auto'
+alias zeg='zegrep --color=auto'
+alias zfg='zfgrep --color=auto'
+alias zg='zgrep --color=auto'
+## other
+alias ,="sudo"
+alias C='clear'
+alias c='cat-less'
+alias dk='sudo docker'
+alias kl='pkill -9 -o'
+alias pg='pgrep -l'
+alias tm='tmux a -t 0'
+alias x='exit'
+
+
+# Prompt
+export PS1='\[\e[0;36m\]---\[\e[0m\]\n    [ \[\e[0;35m\]\t \D{%d/%m/%Y}\[\e[0m\] \[\e[1;32m\]\u\[\e[0m\] ] \[\e[1;31m\]\w\[\e[0m\] \[\e[1;36m\]$(prompt-git-branch)\[\e[0m\]\n\[\e[0;31m\]\$\[\e[0m\] '
+
 
 # Path and other parameter
 export PATH=$PATH:/sbin:/usr/sbin
-export PAGER='/usr/bin/lv -c' # for man command
+export PAGER='/usr/bin/less -R' # for man command
 export EDITOR='/usr/bin/vim' # for visudo command
 export HISTSIZE=100000 # History size
 export TERM=xterm-256color

@@ -18,6 +18,7 @@ set showcmd
 set number
 " Enphasize current line
 set cursorline
+highlight CursorLine cterm=none ctermbg=238 
 " Enable edit one more column in the end of line
 set virtualedit=onemore
 " Smart indent
