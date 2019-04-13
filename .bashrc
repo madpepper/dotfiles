@@ -23,7 +23,8 @@ alias gcl='git clone'
 alias gf='git fetch'
 alias gp='git push'
 alias .up='git -C ~/.dotfiles fetch&&git -C ~/.dotfiles merge&&~/.dotfiles/dotfiles_cp.sh'
-alias .edbash='vim ~/.dotfiles/dotfiles_cp.sh'
+alias .bash='vim ~/.dotfiles/.bashrc'
+alias .sh='vim ~/.dotfiles/dotfiles_cp.sh'
 alias .push='git -C ~/.dotfiles add --all&&git -C ~/.dotfiles commit&&git -C ~/.dotfiles push'
 
 function cd-ls()
