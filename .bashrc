@@ -74,6 +74,7 @@ alias kl='pkill -9 -o'
 alias pg='pgrep -l'
 alias tm='tmux a -t 0'
 alias x='exit'
+alias rs='sudo shutdown -r now'
 
 
 # Prompt
