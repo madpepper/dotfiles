@@ -6,7 +6,7 @@ stty stop undef
 ## cd + ls
 function cd-ls()
 {
-    \cd "$@" && ls
+    \cd "$@" && ls --color=auto
 }
 ## Custom prompt
 function prompt-git-branch()
