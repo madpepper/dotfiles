@@ -39,7 +39,7 @@ alias rs='rsync -ahv'
 ## dotfiles
 alias .bash='vim ~/.dotfiles/.bashrc'
 alias .dep='~/.dotfiles/dotfiles_cp.sh'
-alias .push='git -C ~/.dotfiles add --all&&git -C ~/.dotfiles commit&&git -C ~/.dotfiles push'
+alias .push='git -C ~/.dotfiles add --all;git -C ~/.dotfiles commit;git -C ~/.dotfiles push'
 alias .sh='vim ~/.dotfiles/dotfiles_cp.sh'
 alias .tmux='vim ~/.dotfiles/.tmux.conf'
 alias .up='git -C ~/.dotfiles fetch&&git -C ~/.dotfiles merge&&~/.dotfiles/dotfiles_cp.sh'
