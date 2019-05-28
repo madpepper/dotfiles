@@ -66,7 +66,7 @@ alias zeg='zegrep --color=auto'
 alias zfg='zfgrep --color=auto'
 alias zg='zgrep --color=auto'
 ## other
-alias ,="sudo"
+alias ,="sudo "
 alias C='clear'
 alias c='cat-less'
 alias dk='sudo docker'
