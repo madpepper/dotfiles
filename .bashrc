@@ -6,18 +6,25 @@ stty stop undef
 ## cd + ls
 function cd-ls()
 {
-    \cd "$@" && ls --color=auto
+    \cd "$@" && ls --color=auto;
 }
 ## Custom prompt
 function prompt-git-branch()
 {
     git symbolic-ref HEAD 2>/dev/null >/dev/null &&
-    echo "($(git symbolic-ref HEAD 2>/dev/null | sed 's/^refs\/heads\///'))"
+        echo "($(git symbolic-ref HEAD 2>/dev/null | sed 's/^refs\/heads\///'))";
 }
 ## cat + less
 function cat-less()
 {
-    cat $@ | less
+    cat $@ | less;
+}
+## mount + uid option
+function mount-user()
+{
+    uid=`id | gawk '{print \$1}' | sed -e "s/uid=//g" -e "s/(.*)//g"`;
+    gid=`id | gawk '{print \$2}' | sed -e "s/gid=//g" -e "s/(.*)//g"`;
+    sudo mount -o uid=$uid,gid=$gid $1 $2;
 }
 
 
@@ -72,9 +79,10 @@ alias c='cat-less'
 alias dk='sudo docker'
 alias kl='pkill -9 -o'
 alias pg='pgrep -l'
-alias tm='tmux a -t 0'
+alias tm='tmux a -t 0 || tmux'
 alias x='exit'
 alias rs='sudo shutdown -r now'
+alias mt='mount-user'
 
 
 # Prompt
