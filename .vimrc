@@ -1,6 +1,8 @@
 " setting
 " Set encoding to UTF-8
-set fenc=utf-8
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
 " Don't create backup file
 set nobackup
 " Don't create swap file
