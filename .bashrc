@@ -58,6 +58,7 @@ alias Au='sudo apt update && sudo apt upgrade'
 ## git
 alias GC='git clone'
 alias Ga='git add'
+alias GA='git add -A'
 alias Gc='git commit'
 alias Gd='git diff'
 alias Gf='git fetch'
