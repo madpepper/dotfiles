@@ -55,6 +55,10 @@ alias .vim='vim ~/.dotfiles/.vimrc'
 alias Ai='sudo apt install'
 alias As='apt search'
 alias Au='sudo apt update && sudo apt upgrade'
+## pacman
+alias Pi='sudo pacman -S'
+alias Ps='sudo pacman -Qs'
+alias Pu='sudo pacman -Syyu'
 ## git
 alias GC='git clone'
 alias Ga='git add'
