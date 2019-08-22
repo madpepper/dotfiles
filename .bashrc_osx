@@ -6,7 +6,7 @@ stty stop undef
 ## cd + ls
 function cd-ls()
 {
-    \cd "$@" && ls --color=auto;
+    \cd "$@" && ls ;
 }
 ## Custom prompt
 function prompt-git-branch()
@@ -34,9 +34,9 @@ alias ....='cd-ls ../../..'
 alias ...='cd-ls ../..'
 alias ..='cd-ls ..'
 alias cd='cd-ls'
-alias la='ls -CFal --color=auto'
-alias ll='ls -AlFh --color=auto'
-alias ls='ls --color=auto'
+alias la='ls -CFal '
+alias ll='ls -AlFh '
+alias ls='ls '
 ## cp, mkdir, mv, rm, rsync
 alias cp='cp -i'
 alias md='mkdir -p'
@@ -55,28 +55,23 @@ alias .vim='vim ~/.dotfiles/.vimrc'
 alias Ai='sudo apt install'
 alias As='apt search'
 alias Au='sudo apt update && sudo apt upgrade'
-## pacman
-alias Pi='sudo pacman -S'
-alias Ps='sudo pacman -Qs'
-alias Pu='sudo pacman -Syyu'
 ## git
 alias GC='git clone'
 alias Ga='git add'
-alias GA='git add -A'
 alias Gc='git commit'
 alias Gd='git diff'
 alias Gf='git fetch'
 alias Gp='git push'
 alias Gs='git status'
 ## grep, find
-alias eg='egrep --color=auto'
+alias eg='egrep '
 alias f='find ./ -iname'
-alias fg='fgrep --color=auto'
-alias g='grep --color=auto'
-alias grep='grep --color=auto'
-alias zeg='zegrep --color=auto'
-alias zfg='zfgrep --color=auto'
-alias zg='zgrep --color=auto'
+alias fg='fgrep '
+alias g='grep '
+alias grep='grep '
+alias zeg='zegrep '
+alias zfg='zfgrep '
+alias zg='zgrep '
 ## other
 alias ,="sudo"
 alias C='clear'
