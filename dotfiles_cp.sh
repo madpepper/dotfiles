@@ -15,6 +15,7 @@ cp $basePath/.vimrc ~/.
 cp $basePath/.tmux.conf ~/.
 cp $basePath/.tmux_weather.sh ~/.
 cp $basePath/.gitconfig ~/.
+cp $basePath/.inputrc ~/.
 
 echo "copied!"
 
