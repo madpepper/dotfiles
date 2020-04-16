@@ -34,9 +34,9 @@ alias ....='cd-ls ../../..'
 alias ...='cd-ls ../..'
 alias ..='cd-ls ..'
 alias cd='cd-ls'
-alias la='ls -CFal '
-alias ll='ls -AlFh '
-alias ls='ls '
+alias la='ls -GCFal '
+alias ll='ls -GAlFh '
+alias ls='ls -G'
 ## cp, mkdir, mv, rm, rsync
 alias cp='cp -i'
 alias md='mkdir -p'
@@ -44,12 +44,12 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias rs='rsync -ahv'
 ## dotfiles
-alias .bash='vim ~/.dotfiles/.bashrc'
-alias .dep='~/.dotfiles/dotfiles_cp.sh'
+alias .bash='vim ~/.dotfiles/.bashrc_osx'
+alias .dep='~/.dotfiles/dotfiles_cp.sh OSX'
 alias .push='git -C ~/.dotfiles add --all;git -C ~/.dotfiles commit;git -C ~/.dotfiles push'
 alias .sh='vim ~/.dotfiles/dotfiles_cp.sh'
 alias .tmux='vim ~/.dotfiles/.tmux.conf'
-alias .up='git -C ~/.dotfiles fetch&&git -C ~/.dotfiles merge&&~/.dotfiles/dotfiles_cp.sh'
+alias .up='git -C ~/.dotfiles fetch&&git -C ~/.dotfiles merge&&~/.dotfiles/dotfiles_cp.sh OSX'
 alias .vim='vim ~/.dotfiles/.vimrc'
 ## apt
 alias Ai='sudo apt install'
@@ -63,6 +63,14 @@ alias Gd='git diff'
 alias Gf='git fetch'
 alias Gp='git push'
 alias Gs='git status'
+## brew
+alias Bi='brew install'
+alias Bl='brew list'
+alias Bs='brew search'
+alias Bu='brew update'
+alias BU='brew uninstall'
+alias Bc='brew config'
+alias Bh='brew help'
 ## grep, find
 alias eg='egrep '
 alias f='find ./ -iname'
@@ -87,4 +95,7 @@ alias mt='mount-user'
 
 # Prompt
 export PS1='\[\e[0;36m\]---\[\e[0m\]\n    [ \[\e[0;35m\]\t \D{%d/%m/%Y}\[\e[0m\] \[\e[1;32m\]\u@\h\[\e[0m\] ] \[\e[1;31m\]\w\[\e[0m\] \[\e[1;36m\]$(prompt-git-branch)\[\e[0m\]\n\[\e[0;31m\]\$\[\e[0m\] '
+
+# Disable zsh message
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
