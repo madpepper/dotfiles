@@ -66,6 +66,7 @@ alias GA='git add -A'
 alias Gc='git commit'
 alias Gd='git diff'
 alias Gf='git fetch'
+alias Gm='git merge'
 alias Gp='git push'
 alias Gs='git status'
 ## grep, find
