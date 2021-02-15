@@ -95,3 +95,5 @@ export PS1='\[\e[0;36m\]---\[\e[0m\]\n    [ \[\e[0;35m\]\t \D{%d/%m/%Y}\[\e[0m\]
 
 LANG=ja_JP.utf8
 
+export PATH=$PATH:~/.local/bin
+
