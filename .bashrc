@@ -100,3 +100,5 @@ set completion-ignore-case on
 # pip path
 export PATH=$PATH:~/.local/bin
 
+export PATH=$PATH:~/.local/bin
+
