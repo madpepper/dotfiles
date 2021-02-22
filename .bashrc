@@ -97,5 +97,6 @@ export PS1='\[\e[0;36m\]---\[\e[0m\]\n    [ \[\e[0;35m\]\t \D{%d/%m/%Y}\[\e[0m\]
 # Ignore case in completion
 set completion-ignore-case on
 
-LANG=ja_JP.utf8
+# pip path
+export PATH=$PATH:~/.local/bin
 
