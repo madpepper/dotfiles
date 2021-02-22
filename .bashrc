@@ -2,6 +2,10 @@
 stty stop undef
 
 
+# PATH
+export PATH=$PATH:~/.local/bin
+
+
 # Functions
 ## cd + ls
 function cd-ls()
@@ -92,11 +96,10 @@ alias mt='mount-user'
 
 
 # Prompt
+## Appearance
 export PS1='\[\e[0;36m\]---\[\e[0m\]\n    [ \[\e[0;35m\]\t \D{%d/%m/%Y}\[\e[0m\] \[\e[1;32m\]\u@\h\[\e[0m\] ] \[\e[1;31m\]\w\[\e[0m\] \[\e[1;36m\]$(prompt-git-branch)\[\e[0m\]\n\[\e[0;31m\]\$\[\e[0m\] '
-
-# Ignore case in completion
+## Ignore case in completion
 set completion-ignore-case on
-
-# pip path
-export PATH=$PATH:~/.local/bin
+## Locale
+export LANG=ja_JP.utf8
 
