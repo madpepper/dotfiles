@@ -76,7 +76,7 @@ alias Gs='git status'
 ## grep, find
 alias eg='egrep --color=auto'
 alias f='find ./ -iname'
-alias fg='fgrep --color=auto'
+alias fgr='fgrep --color=auto'
 alias g='grep --color=auto'
 alias grep='grep --color=auto'
 alias zeg='zegrep --color=auto'
