@@ -101,7 +101,7 @@ export PS1='\[\e[0;36m\]---\[\e[0m\]\n    [ \[\e[0;35m\]\t \D{%d/%m/%Y}\[\e[0m\]
 ## Ignore case in completion
 set completion-ignore-case on
 ## Locale
-export LANG=ja_JP.utf8
+export LANG=en_US.UTF-8
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/lib/google-cloud-sdk/path.bash.inc' ]; then . '/usr/local/lib/google-cloud-sdk/path.bash.inc'; fi
