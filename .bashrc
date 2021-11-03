@@ -63,6 +63,7 @@ alias Au='sudo apt update && sudo apt upgrade'
 alias Pi='sudo pacman -S'
 alias Ps='sudo pacman -Ss'
 alias Pu='sudo pacman -Syyu'
+alias Pr='sudo pacman -Rs'
 ## git
 alias GC='git clone'
 alias Ga='git add'
